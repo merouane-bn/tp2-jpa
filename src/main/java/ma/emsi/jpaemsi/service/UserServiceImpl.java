@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-//@service est component mais pour la couche metier
-// pour gerer transaction @transaction
-//pour indiquer a spring que cest une classe qui doit etre instancier au demmarage @component
+/*@service est component mais pour la couche metier
+pour gerer transaction @transaction
+pour indiquer a spring que cest une classe qui doit etre instancier au demmarage @component */
 @Service
 @Transactional
 @AllArgsConstructor
@@ -51,7 +51,7 @@ public class UserServiceImpl implements UserService {
             role.getUsers().add(user);
         }
         // userRepository.save(user);
-        // ce n'est pas la peine de maj car  @transaction
+        // ce n'est pas la peine de update car  @transaction
     }
 
     @Override

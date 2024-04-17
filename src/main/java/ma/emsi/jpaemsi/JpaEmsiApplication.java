@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 
 @SpringBootApplication
 public class JpaEmsiApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(JpaEmsiApplication.class, args);
     }
@@ -40,7 +39,6 @@ public class JpaEmsiApplication {
             userService.addRoleToUser("admin","USER");
             userService.addRoleToUser("admin","ADMIN");
 
-
             try {
                 User user = userService.authenticate("user1", "123456");
                 System.out.println(user.getUserId());
@@ -54,9 +52,6 @@ public class JpaEmsiApplication {
             catch (Exception e){
                 e.printStackTrace();
             }
-
-
-
         };
     }
 }
